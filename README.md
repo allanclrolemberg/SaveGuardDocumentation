@@ -1,15 +1,16 @@
 # Save Guard Documentation
 
-##Introduction to SaveGuard:
+## Introduction to SaveGuard:
 
   - SaveGuard is a powerful game save and load plugin designed to streamline the process of managing save data in PC and console games. With SaveGuard, developers can easily implement saving and loading functionality in their games, while also benefiting from the flexibility of creating variables within a global container.
 
-##Purpose:
+## Purpose:
 
   - The primary purpose of SaveGuard is to provide an intuitive and efficient solution for game save and load operations. With SaveGuard, players can save their progress in the game and resume from where they left off, offering a more immersive and convenient gaming experience. Additionally, SaveGuard offers a unique feature: the ability to create variables within a global container.
 
-##Benefits:
+## Benefits:
 <blockquote>
+  
   - Easy integration: SaveGuard offers a simple and fast integration into existing games. Using its SaveSystemFacility ActorComponent, developers can easily add saving and loading functionality to characters, environments, and other game elements.
 
   - Active User and controller recognition: SaveGuard's Active User system automatically identifies the active player and the controller being used, enabling personalized saving and loading for each player.
