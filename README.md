@@ -22,7 +22,7 @@
 
   - The primary purpose of SaveGuard is to provide an intuitive and efficient solution for game save and load operations. With SaveGuard, players can save their progress in the game and resume from where they left off, offering a more immersive and convenient gaming experience. Additionally, SaveGuard offers a unique feature: the ability to create variables within a global container.
 
-### * 1.2. Benefits:<a name="#passo1.2"></a>
+### * 1.2. Benefits:<a name="passo1.2"></a>
   
   - Easy integration: SaveGuard offers a simple and fast integration into existing games. Using its SaveSystemFacility ActorComponent, developers can easily add saving and loading functionality to characters, environments, and other game elements.
 
@@ -39,3 +39,5 @@
 
 SaveGuard offers a comprehensive solution to meet the needs of game save operations. In addition to making saving and loading games easy, it also provides the flexibility to create variables within a global container, further simplifying game data management. With its simple integration, flexible data management, and multiplatform support, SaveGuard is the ideal solution for developers seeking efficient and customizable saving and loading features in their games.
 </blockquote>
+
+## 2. Step-by-Step guide to Save Guard operation:
