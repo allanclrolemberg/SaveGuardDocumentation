@@ -45,3 +45,5 @@ SaveGuard offers a comprehensive solution to meet the needs of game save operati
 
   Before anything else, SaveGuard is primarily composed of C++ classes, although you can access most of its functions through Blueprints. However, it is recommended that you have familiarity with C++ in order to fully leverage the features that SaveGuard offers.
  </blockquote> 
+
+   - When you activate the SaveGuard plugin, it will create a new section in your ProjectSettings. In this section, you will choose the class for the MainSaveGame and the Slot (both come with default assets, but you can modify them based on your local changes).
