@@ -104,6 +104,106 @@ Please note that in order to save this information, you need to call the SaveThe
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/468d03a3-c9fd-460d-8fe9-5a5d4fc1dc20)
 
+<blockquote>
+  
+`To choose the maximum number of slots that your game can have, you will need to modify the default value in SSG_SaveSystem.`
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/658fbe7e-475b-48ee-8aef-bfc54a5ace0e)
+
+ </blockquote> 
+
+Now let's move on to the easier way, which is using the **`SaveSystemFacility`**.
+
+## 4. SaveSystemFacility
+
+The SaveSystemFacility is an ActorComponent that you can attach to any actor. It can perform various tasks and be activated in different ways, as we will see below.
+
+In a collision volume, you added the SaveGuardFacility.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/e4ec6b0b-8bff-4eb8-ae6f-07271b376470)
+
+
+Upon adding it, you can observe the existence of two UENUMs: Intention and ActivationMode. First, let's explore all the activation modes.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/4e086dd2-fb60-41de-8a59-5c0fabbded28)
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/f42a3d57-8ac1-42d8-86c3-ab872d17b4be)
+
+
+### *4.1. Activation Modes
+
+#### *4.1.1. Overlap
+
+  - When you select "Overlap" as the activation mode, it will automatically activate when it detects an overlap with the specified ActorName. Please note that the name must be entered correctly as recognized by the reflection system. To facilitate this, you can temporarily set the ShowNameOfActorWhenCollider variable to true. This way, when an actor overlaps with the volume, its name will be printed on the screen as a reference for you.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/3a71703c-ca1e-4e0a-9af2-f70cd4eb88a7)
+
+#### *4.1.2. BeginPlay
+
+  - The second activation mode is "BeginPlay," which means it will be executed as soon as the game starts. Please note that this activation mode may sometimes cause a crash because, depending on the structure of your game, the SaveGuardSystem may not be initialized before the ActorComponent is activated.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/3f56785d-fe5d-4a0c-8ec7-715a5d09b068)
+
+#### *4.1.3. Hit
+
+  - The third activation method is very similar to "Overlap," with the only difference being that it detects "Hit" instead.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/3993b8f7-3d96-41de-9e38-7a530445797a)
+
+
+#### *4.1.4. Other Method Activated
+
+  - Lastly, there is the "OtherMethodActivated" option. If you want to activate it based on custom conditions, you can select "OtherMethodActivated" and specify when it will be activated by calling that method in the class.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/68a12c1c-eaca-4632-9a1a-da05a7368cbe)
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/2fa3d133-dc3a-4359-ab9a-bb4aa135aff0)
+
+### *4.2. Intentions
+
+Now that we have covered the activation modes, let's explore the intentions, which determine what we want the SaveSystemFacility to execute when activated.
+
+#### *4.2.1. Send Parameter
+
+  - In the "Send Parameter" intention, you can send values to the GlobalDataContainer. It's worth noting that there is a bool variable called "SendAndSaveParameter" which allows you to both send the parameter and make it persistent. However, please note that the slot must already be valid in order to mark it as a bool.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/f2e771df-b8fb-4bf3-b664-7a65b3a4ef71)
+
+#### *4.2.2. Change Parameter
+
+  - This intention works similarly to the previous one, with the difference that it is used to change the parameter. In the "ParameterNames" field, you will enter the name of the parameter, and in the "ParameterValues" field, you will enter the corresponding values.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/8ed3d40a-3c50-4831-bc22-20d8c87c23bf)
+
+#### *4.2.3. Delete Parameter
+
+  - In the "Delete Parameter" intention, as the name suggests, you will remove a parameter from the GlobalDataContainer.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/476634ad-c1b8-4ae2-bdcd-f4f66e5fd4d3)
+
+#### *4.2.4. Save Game
+
+  - When you select "SaveGame" as the intention, it will by default save to the currently active slot. If it is the first time you are saving, you can set the "IsNewSlot" variable to true and provide the slot name.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/93631751-1158-49fa-b28d-192296069e87)
+
+#### *4.2.5. Load Game
+
+  - In the "LoadGame" intention, it will load the game from a valid slot.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/af6568a4-9594-41d2-ae53-d35c44dbb107)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
