@@ -48,4 +48,35 @@ SaveGuard offers a comprehensive solution to meet the needs of game save operati
 
    - When you activate the SaveGuard plugin, it will create a new section in your ProjectSettings. In this section, you will choose the class for the MainSaveGame and the Slot (both come with default assets, but you can modify them based on your local changes).
 
-   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/Image.png)
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/image.png)
+   
+Another thing you will need to do is change the default WorldSettings to **`SaveGuardWorldSettings`**.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/27aaf9a2-2fc4-438c-954f-38e53ed9c0e4)
+
+"SaveGuard plugin consists of many classes, but the end user only needs to concern themselves with the **`SaveGuardSystem`**. I will now show you how it works.
+
+Within the SaveGuardSystem class, you only need to concern yourself with two methods, and only if the current system does not allow you to include a variable accepted by the GlobalDataContainer.
+The methods are **`SaveGame_Implementation()`** and **`LoadActiveGameSlot_Implementation()`**.
+In both methods, there are default structures that should not be altered, but you can add new variables to be stored there. In both methods, there is a commented example that demonstrates how to do it.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/1ef33d5c-f415-41f4-9100-379cfe03de1d)
+
+We will discuss in more detail the most important methods of this class later on.
+
+The SaveGuardSystem class is a UObject, and it needs to be constructed to function properly. Let's go through the step-by-step process of how you can do that:
+
+In your GameMode, after the BeginPlay, you will follow the example below (remember that you can do the same process in C++):
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/25360efc-0fa3-4ca1-8161-49b461e04258)
+
+Once you have completed these steps, your game will initialize the MainSaveGame to create or load slots. However, before doing that, you need to learn how to add variables to the GlobalDataContainer.
+
+
+
+
+
+
+
+
+
