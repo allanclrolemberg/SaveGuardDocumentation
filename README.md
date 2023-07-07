@@ -47,3 +47,5 @@ SaveGuard offers a comprehensive solution to meet the needs of game save operati
  </blockquote> 
 
    - When you activate the SaveGuard plugin, it will create a new section in your ProjectSettings. In this section, you will choose the class for the MainSaveGame and the Slot (both come with default assets, but you can modify them based on your local changes).
+
+   ![](https://github.com/quanticdawnstudio/GameBalanceDoc/blob/main/Ima/Image.png)
