@@ -40,7 +40,7 @@
 SaveGuard offers a comprehensive solution to meet the needs of game save operations. In addition to making saving and loading games easy, it also provides the flexibility to create variables within a global container, further simplifying game data management. With its simple integration, flexible data management, and multiplatform support, SaveGuard is the ideal solution for developers seeking efficient and customizable saving and loading features in their games.
 </blockquote>
 
-## 2. Step-by-Step Guide on How to Use SaveGuard:
+## 2. Step-by-Step Guide on How to Use SaveGuard:<a name="passob"></a>
 <blockquote>
 
   Before anything else, SaveGuard is primarily composed of C++ classes, although you can access most of its functions through Blueprints. However, it is recommended that you have familiarity with C++ in order to fully leverage the features that SaveGuard offers.
@@ -71,6 +71,44 @@ In your GameMode, after the BeginPlay, you will follow the example below (rememb
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/25360efc-0fa3-4ca1-8161-49b461e04258)
 
 Once you have completed these steps, your game will initialize the MainSaveGame to create or load slots. However, before doing that, you need to learn how to add variables to the GlobalDataContainer.
+
+## 3. Adding variables to the GlobalDataContainer<a name="passob"></a>
+
+  - In the first approach, when you want to add a variable, you can follow these steps:
+
+  1 - When you want to add a variable, call the SaveGuardGISubsystem and get its SaveGuardObject.
+
+  2 - Then, call the SetGameSlotInfo method on the SaveGuardObject and provide the parameter to add. Please note that the parameter will be added but not yet saved in the slot; you are simply adding the information.
+
+Here's an example of how you can add a parameter using this approach:
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/c5f7002e-1bf7-415d-9bc9-8a25fd0606e4)
+
+In the SetGameSlotInfo method, you can add the desired information as parameters.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/5f709828-f6b9-4c88-8fa2-aaece0238619)
+
+With the GetParameterValue method, you can retrieve that value and link it to something internal in your project.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/429259fa-495c-4f46-bd39-a17199eae31b)
+
+To change the value, simply call the ChangeGameSlotInfo method.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/3f299f0d-e4ef-41e4-a0d1-190d4f450add)
+
+To remove a parameter, you can simply call the RemoveGameSlotInfo method.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/c48a2840-697a-4751-a7ba-fec0e55cdd11)
+
+Please note that in order to save this information, you need to call the SaveTheGame method in the SaveGuardGISubsystem. You will see that it has an input for SlotIndex, where you can create something to set the Slot if it's the first save, or you can use the active Slot, as shown in the example below.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/468d03a3-c9fd-460d-8fe9-5a5d4fc1dc20)
+
+
+
+
+
+
 
 
 
