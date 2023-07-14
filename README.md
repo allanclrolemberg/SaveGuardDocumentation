@@ -9,7 +9,7 @@
     <li><a href="#Init">Introduction to SaveGuard:</a><br> 
       1.1 - <a href="#passob">Purpose:</a> <br> 
       1.2 - <a href="#passo1.2">Benefits:</a> <br> 
-    <li><a href="#passob">Step-by-Step Guide on How to Use SaveGuard:</a><br> 
+    <li><a href="#passob1">Step-by-Step Guide on How to Use SaveGuard:</a><br> 
     <li><a href="#passoc">Adding variables to the GlobalDataContainer:</a><br> 
     <li><a href="#passod">Save System Facility:</a><br> 
       4.1 - <a href="#passoe">Activation Modes:</a> <br> 
@@ -55,7 +55,7 @@
 SaveGuard offers a comprehensive solution to meet the needs of game save operations. In addition to making saving and loading games easy, it also provides the flexibility to create variables within a global container, further simplifying game data management. With its simple integration, flexible data management, and multiplatform support, SaveGuard is the ideal solution for developers seeking efficient and customizable saving and loading features in their games.
 </blockquote>
 
-## 2. Step-by-Step Guide on How to Use SaveGuard:<a name="passob"></a>
+## 2. Step-by-Step Guide on How to Use SaveGuard:<a name="passob1"></a>
 <blockquote>
 
   Before anything else, SaveGuard is primarily composed of C++ classes, although you can access most of its functions through Blueprints. However, it is recommended that you have familiarity with C++ in order to fully leverage the features that SaveGuard offers.
