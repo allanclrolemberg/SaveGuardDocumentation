@@ -11,6 +11,9 @@
       1.2 - <a href="#passo1.2">Benefits:</a> <br> 
     <li><a href="#passob">Step-by-Step Guide on How to Use SaveGuard:</a><br> 
     <li><a href="#passoc">Adding variables to the GlobalDataContainer:</a><br> 
+    <li><a href="#passod">Save System Facility:</a><br> 
+      4.1 - <a href="#passoe">Activation Modes:</a> <br> 
+        4.1.1 - <a href="#passof">Activation Modes:</a> <br> 
   <ol dir="auto">
 <ol dir="auto">
 
@@ -120,7 +123,7 @@ Please note that in order to save this information, you need to call the SaveThe
 
 Now let's move on to the easier way, which is using the **`SaveSystemFacility`**.
 
-## 4. SaveSystemFacility:<a name="passod"></a>
+## 4. Save System Facility:<a name="passod"></a>
 
 The SaveSystemFacility is an ActorComponent that you can attach to any actor. It can perform various tasks and be activated in different ways, as we will see below.
 
