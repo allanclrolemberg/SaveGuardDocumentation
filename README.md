@@ -9,6 +9,8 @@
     <li><a href="#Init">Introduction to SaveGuard:</a><br> 
       1.1 - <a href="#passob">Purpose:</a> <br> 
       1.2 - <a href="#passo1.2">Benefits:</a> <br> 
+    <li><a href="#passob">Step-by-Step Guide on How to Use SaveGuard:</a><br> 
+    <li><a href="#passoc">Adding variables to the GlobalDataContainer:</a><br> 
   <ol dir="auto">
 <ol dir="auto">
 
@@ -77,7 +79,7 @@ In your GameMode, after the BeginPlay, you will follow the example below (rememb
 
 Once you have completed these steps, your game will initialize the MainSaveGame to create or load slots. However, before doing that, you need to learn how to add variables to the GlobalDataContainer.
 
-## 3. Adding variables to the GlobalDataContainer<a name="passob"></a>
+## 3. Adding variables to the GlobalDataContainer<a name="passoc"></a>
 
   - In the first approach, when you want to add a variable, you can follow these steps:
 
@@ -118,7 +120,7 @@ Please note that in order to save this information, you need to call the SaveThe
 
 Now let's move on to the easier way, which is using the **`SaveSystemFacility`**.
 
-## 4. SaveSystemFacility
+## 4. SaveSystemFacility:<a name="passod"></a>
 
 The SaveSystemFacility is an ActorComponent that you can attach to any actor. It can perform various tasks and be activated in different ways, as we will see below.
 
@@ -134,28 +136,28 @@ Upon adding it, you can observe the existence of two UENUMs: Intention and Activ
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/f42a3d57-8ac1-42d8-86c3-ab872d17b4be)
 
 
-### *4.1. Activation Modes
+### *4.1. Activation Modes:<a name="passoe"></a>
 
-#### *4.1.1. Overlap
+#### *4.1.1. Overlap:<a name="passof"></a>
 
   - When you select "Overlap" as the activation mode, it will automatically activate when it detects an overlap with the specified ActorName. Please note that the name must be entered correctly as recognized by the reflection system. To facilitate this, you can temporarily set the ShowNameOfActorWhenCollider variable to true. This way, when an actor overlaps with the volume, its name will be printed on the screen as a reference for you.
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/3a71703c-ca1e-4e0a-9af2-f70cd4eb88a7)
 
-#### *4.1.2. BeginPlay
+#### *4.1.2. BeginPlay:<a name="passog"></a>
 
   - The second activation mode is "BeginPlay," which means it will be executed as soon as the game starts. Please note that this activation mode may sometimes cause a crash because, depending on the structure of your game, the SaveGuardSystem may not be initialized before the ActorComponent is activated.
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/3f56785d-fe5d-4a0c-8ec7-715a5d09b068)
 
-#### *4.1.3. Hit
+#### *4.1.3. Hit:<a name="passoh"></a>
 
   - The third activation method is very similar to "Overlap," with the only difference being that it detects "Hit" instead.
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/3993b8f7-3d96-41de-9e38-7a530445797a)
 
 
-#### *4.1.4. Other Method Activated
+#### *4.1.4. Other Method Activated:<a name="passoi"></a>
 
   - Lastly, there is the "OtherMethodActivated" option. If you want to activate it based on custom conditions, you can select "OtherMethodActivated" and specify when it will be activated by calling that method in the class.
 
@@ -163,41 +165,41 @@ Upon adding it, you can observe the existence of two UENUMs: Intention and Activ
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/2fa3d133-dc3a-4359-ab9a-bb4aa135aff0)
 
-### *4.2. Intentions
+### *4.2. Intentions:<a name="passoj"></a>
 
 Now that we have covered the activation modes, let's explore the intentions, which determine what we want the SaveSystemFacility to execute when activated.
 
-#### *4.2.1. Send Parameter
+#### *4.2.1. Send Parameter:<a name="passol"></a>
 
   - In the "Send Parameter" intention, you can send values to the GlobalDataContainer. It's worth noting that there is a bool variable called "SendAndSaveParameter" which allows you to both send the parameter and make it persistent. However, please note that the slot must already be valid in order to mark it as a bool.
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/f2e771df-b8fb-4bf3-b664-7a65b3a4ef71)
 
-#### *4.2.2. Change Parameter
+#### *4.2.2. Change Parameter:<a name="passom"></a>
 
   - This intention works similarly to the previous one, with the difference that it is used to change the parameter. In the "ParameterNames" field, you will enter the name of the parameter, and in the "ParameterValues" field, you will enter the corresponding values.
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/8ed3d40a-3c50-4831-bc22-20d8c87c23bf)
 
-#### *4.2.3. Delete Parameter
+#### *4.2.3. Delete Parameter:<a name="passon"></a>
 
   - In the "Delete Parameter" intention, as the name suggests, you will remove a parameter from the GlobalDataContainer.
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/476634ad-c1b8-4ae2-bdcd-f4f66e5fd4d3)
 
-#### *4.2.4. Save Game
+#### *4.2.4. Save Game:<a name="passoo"></a>
 
   - When you select "SaveGame" as the intention, it will by default save to the currently active slot. If it is the first time you are saving, you can set the "IsNewSlot" variable to true and provide the slot name.
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/93631751-1158-49fa-b28d-192296069e87)
 
-#### *4.2.5. Load Game
+#### *4.2.5. Load Game:<a name="passop"></a>
 
   - In the "LoadGame" intention, it will load the game from a valid slot.
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/af6568a4-9594-41d2-ae53-d35c44dbb107)
 
-## 5. CheckPoint
+## 5. CheckPoint:<a name="passoq"></a>
 
   - The SaveGuard has a Checkpoint system. All you need to do is place the BP_Checkpoint in the map and adjust the size of the collision volume. Every time the character overlaps with the BP_Checkpoint, it will be registered in the WorldSettings.
 
