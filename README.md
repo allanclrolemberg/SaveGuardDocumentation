@@ -197,6 +197,21 @@ Now that we have covered the activation modes, let's explore the intentions, whi
 
 ![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/af6568a4-9594-41d2-ae53-d35c44dbb107)
 
+## 5. CheckPoint
+
+  - The SaveGuard has a Checkpoint system. All you need to do is place the BP_Checkpoint in the map and adjust the size of the collision volume. Every time the character overlaps with the BP_Checkpoint, it will be registered in the WorldSettings.
+
+To respawn a character, you can simply call the Respawn() function inside the SaveGuardGISubsystem. In this function, you need to provide the actor that will respawn and specify whether or not to perform a LoadGame.
+
+![image](https://github.com/allanclrolemberg/SaveGuardDocumentation/assets/68305172/3c655339-d006-46f0-9c64-53e58980bb43)
+
+<blockquote>
+  
+`Additional effects should be created based on the developer's creativity.`
+ </blockquote> 
+
+
+
 
 
 
